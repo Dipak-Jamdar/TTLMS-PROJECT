@@ -1,0 +1,9 @@
+.navbar {
+  background-color: #353847 !important;
+  color: #ffffff;
+  height: 7rem;
+}
+
+.dropdown-item:hover {
+  background-color: #ddd;
+}

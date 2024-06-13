@@ -1,0 +1,64 @@
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 9px;
+}
+
+.day {
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.current-day {
+  background-color: #efefef;
+}
+
+.weekend {
+  color: red;
+}
+
+.calendar-card {
+  width: 25.4rem;
+  height: 29rem;
+  overflow-y: auto;
+}
+
+.calendar-card::-webkit-scrollbar {
+  display: none;
+}
+
+.day.current-day {
+  background-color: #007bff;
+  color: white;
+}
+
+.day.weekend {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.day {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.day.selected {
+  border: 1px solid var(--dark-color);
+}
+
+.current-day {
+  font-weight: bold;
+}
+
+.weekend {
+  color: #ff6347;
+}
+
+
+.day.holiday {
+  background-color: yellow;
+}

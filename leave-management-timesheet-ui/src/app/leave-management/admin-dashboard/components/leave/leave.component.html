@@ -1,0 +1,36 @@
+<div class="main-content bg-light rounded-3 shadow p-3">
+  <h4 class="text-center p-3">Pending Leaves</h4>
+  <table class="table table-hover table-responsive">
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Leave Type</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of pendingLeaves">
+        <td>{{ leave.user.name }}</td>
+        <td>{{ leave.leave_type }}</td>
+        <td>{{ leave.from_date | date : "dd-MM-yyyy" }}</td>
+        <td>{{ leave.to_date | date : "dd-MM-yyyy" }}</td>
+        <td>
+          <button
+            class="btn btn-success m-1"
+            (click)="updateLeaveStatus(leave.id, 'approved')"
+          >
+            Approve
+          </button>
+          <button
+            class="btn btn-danger m-1"
+            (click)="updateLeaveStatus(leave.id, 'canceled')"
+          >
+            Cancel
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

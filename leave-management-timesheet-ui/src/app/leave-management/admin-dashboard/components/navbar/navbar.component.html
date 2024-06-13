@@ -1,0 +1,101 @@
+<div class="nav-background top-margin">
+  <div class="d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="#"></a>
+    <form class="form-inline search-bar my-5 mx-5">
+      <div class="d-flex">
+        <div>
+          <input
+            class="form-control p-2"
+            id="search"
+            type="search"
+            placeholder="Search here"
+            aria-label="Search"
+          />
+        </div>
+        <div
+          class="image-container"
+          (mouseover)="showDropdown()"
+          (mouseout)="hideDropdown()"
+        >
+          <img
+            src="../../../../../assets/img/team/t4.webp"
+            class="navbar-image rounded-circle mb-2"
+          />
+          <ul class="dropdown-list" *ngIf="dropdownVisible">
+            <li>
+              <a><i class="bi bi-person mx-2"></i>Profile</a>
+            </li>
+            <li>
+                <a><i class="bi bi-bell mx-2"></i>Notifications</a>
+              </li>
+            <li>
+              <a href="#" class="dropdown-item" (click)="logout()"><i
+                class="bi bi-box-arrow-left mx-2"></i>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+  <nav class="navbar navbar-expand-lg mb-5 mx-4">
+    <ul class="navbar-nav navbar-items d-flex flex-row ml-auto">
+      <li class="mx-3">
+        <a
+          routerLink="/leave-management/admin-dashboard"
+          routerLinkActive="active"
+          class="nav-link p-3"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ><i class="bi bi-people me-2"></i>Dashboard</a
+        >
+      </li>
+      <li class="mx-3">
+        <a
+          routerLink="/leave-management/admin-dashboard/employee"
+          routerLinkActive="active"
+          class="nav-link p-3"
+          ><i class="bi bi-people me-2"></i>Employees</a
+        >
+      </li>
+      <li class="mx-3">
+        <a
+          routerLink="/leave-management/admin-dashboard/calendar"
+          routerLinkActive="active"
+          class="nav-link p-3"
+          ><i class="bi bi-calendar-event me-2"></i>Calendar</a
+        >
+      </li>
+      <li class="mx-3">
+        <a
+          routerLink="/leave-management/admin-dashboard/leave"
+          routerLinkActive="active"
+          class="nav-link p-3"
+          ><i class="bi bi-briefcase me-2"></i>Leave</a
+        >
+      </li>
+      <li class="mx-3">
+        <a
+          routerLink="/leave-management/admin-dashboard/reports"
+          routerLinkActive="active"
+          class="nav-link p-3"
+          ><i class="bi bi-rocket-takeoff me-2"></i>Reports</a
+        >
+      </li>
+      <li class="mx-3">
+        <a
+          routerLink="/leave-management/admin-dashboard/manage"
+          routerLinkActive="active"
+          class="nav-link p-3"
+          ><i class="bi bi-arrow-repeat me-2"></i>Manage</a
+        >
+      </li>
+      <li class="mx-3">
+        <a
+          routerLink="/leave-management/admin-dashboard/settings"
+          routerLinkActive="active"
+          class="nav-link p-3"
+          ><i class="bi bi-gear me-2"></i>Settings</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>

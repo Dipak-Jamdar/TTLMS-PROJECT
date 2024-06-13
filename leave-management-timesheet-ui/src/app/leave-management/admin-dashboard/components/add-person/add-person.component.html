@@ -1,0 +1,90 @@
+<main class="main-content">
+    <div class="card card-hover rounded-4 shadow-lg mb-4 me-4 p-2">
+      <div class="card-body mx-2">
+        <h5 class="card-title">Add Person</h5>
+        <hr />
+        <form [formGroup]="addPersonForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="first_name"
+              formControlName="first_name"
+              placeholder="Enter first name"
+            />
+          </div>
+    
+          <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="last_name"
+              formControlName="last_name"
+              placeholder="Enter last name"
+            />
+          </div>
+    
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              formControlName="email"
+              placeholder="Enter email"
+            />
+          </div>
+    
+          <div class="mb-3">
+            <label for="mobile_no" class="form-label">Mobile Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="mobile_no"
+              formControlName="mobile_no"
+              placeholder="Enter mobile number"
+            />
+          </div>
+    
+          <div class="mb-3">
+            <label for="country_code" class="form-label">Country Code</label>
+            <input
+              type="text"
+              class="form-control"
+              id="country_code"
+              formControlName="country_code"
+              placeholder="Enter country code"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="date_of_joining" class="form-label">Date of Joining</label>
+            <input
+              type="date"
+              class="form-control"
+              id="date_of_joining"
+              formControlName="date_of_joining"
+              placeholder="Enter date of joining"
+            />
+          </div>
+    
+          <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <select class="form-select" id="location" formControlName="location">
+              <option value="">Select location</option>
+              <option *ngFor="let location of locations" [value]="location.id">{{ location.name }}</option>
+            </select>
+          </div>
+    
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="is_active" formControlName="is_active" />
+            <label class="form-check-label" for="is_active">Is Active</label>
+          </div>
+    
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>

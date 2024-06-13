@@ -1,0 +1,20 @@
+<main class="main-content">
+  <div class="d-flex">
+    <div class="card shadow-lg setting-data">
+      <h4 class="setting-headings">Basic Information</h4>
+      <hr />
+      <h5>First Name: {{ employee.first_name }}</h5>
+      <h5>Last Name: {{ employee.last_name }}</h5>
+      <h5>Email: {{ employee.email }}</h5>
+      <h5>Mobile Number: {{ employee.mobile_no }}</h5>
+      <h5>Date of Joining: {{ employee.date_of_joining | date: 'yyyy-MM-dd'  }}</h5>
+    </div>
+
+    <div class="card shadow-lg setting-data">
+      <h4 class="setting-headings">Location</h4>
+      <hr/>
+      <h5>Location Name: {{ employee.location.name }}</h5>
+      
+        </div>
+  </div>
+</main>
